@@ -32,7 +32,14 @@ export default class Stats extends Component {
 
     }
     incrementAsync = () => {
+        setTimeout(() => {
+            const { value } = this.myRef.current
+            // console.log(this.myRef.current.value);
 
+            const { count } = this.state
+            this.setState({ count: count + parseInt(value) })
+            console.log(value);
+        }, 2000)
 
     }
 
