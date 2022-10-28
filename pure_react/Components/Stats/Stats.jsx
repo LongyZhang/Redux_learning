@@ -2,46 +2,44 @@ import React, { Component } from 'react'
 
 export default class Stats extends Component {
 
-    state = { count: 0, total: 0 }
+    state = { count: 0 }
 
     myRef = React.createRef()
+
     increment = () => {
         const { value } = this.myRef.current
         // console.log(this.myRef.current.value);
 
-        const { count, total } = this.state
-        this.setState({ count: count + parseInt(value), total: total + 1 })
+        const { count } = this.state
+        this.setState({ count: count + parseInt(value) })
         console.log(value);
-        this.props.passBack(total)
     }
     decrement = () => {
         const { value } = this.myRef.current
         // console.log(this.myRef.current.value);
 
-        const { count, total } = this.state
-        this.setState({ count: count - parseInt(value), total: total + 1 })
+        const { count } = this.state
+        this.setState({ count: count - parseInt(value) })
         console.log(value);
-        this.props.passBack(total)
     }
     incrementOdd = () => {
         const { value } = this.myRef.current
         // console.log(this.myRef.current.value);
 
-        const { count, total } = this.state
+        const { count } = this.state
 
-        count % 2 == 1 ? this.setState({ count: count + parseInt(value), total: total + 1 }) : console.log("invalid action");
-        this.props.passBack(total)
+        count % 2 == 1 ? this.setState({ count: count + parseInt(value) }) : console.log("invalid action");
+
     }
     incrementAsync = () => {
         setTimeout(() => {
             const { value } = this.myRef.current
             // console.log(this.myRef.current.value);
 
-            const { count, total } = this.state
-            this.setState({ count: count + parseInt(value), total: total + 1 })
+            const { count } = this.state
+            this.setState({ count: count + parseInt(value) })
             console.log(value);
-            this.props.passBack(total)
-        }, 2000)
+        }, 2000)  
 
     }
 
