@@ -15,3 +15,15 @@
 3   Redux Reducer:
     1: it is used to initialise and process state
     2: when you do process, it will create new state pure function basing on previous stawte and action
+
+4   .src folder:
+        -src
+            -redux
+                -store.js
+                -stats_reducer.js
+5   .store.js
+        1. import configStore from redux
+        2. configStore needs to improt a reducer as service
+        3. export the store object
+
+6      
