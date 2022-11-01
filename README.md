@@ -29,4 +29,8 @@
 6   .stats_reduce
         1. use spread operator to update object
         2. reducer is core of redux,it process data basing on the type
+
+7   .Action
+        1. Action can be object and function
+        2. Object action is sync Action, function action is async Action
         
