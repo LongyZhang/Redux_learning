@@ -1,12 +1,19 @@
 import React, { Component } from 'react'
+import store from '../../Redux/store'
 
 export default class Action extends Component {
+
+    componentDidMount() {
+        store.subscribe(() => {
+            this.setState({})
+        })
+    }
+
     render() {
-        const { totalTimes } = this.props
-        console.log(this.props);
+
         return (
             <div>
-                <h4>Total Clicked times:{totalTimes}</h4>
+                <h4>Total Clicked times:{store.getState().total}</h4>
             </div>
         )
     }

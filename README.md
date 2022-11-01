@@ -26,4 +26,7 @@
         2. configStore needs to improt a reducer as service
         3. export the store object
 
-6      
+6   .stats_reduce
+        1. use spread operator to update object
+        2. reducer is core of redux,it process data basing on the type
+        

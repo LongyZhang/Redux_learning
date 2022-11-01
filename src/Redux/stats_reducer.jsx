@@ -5,24 +5,26 @@
 // first : prvious state and action
 // reducer only process data
 
-const initState = 0
+
 // preState=initState ? how does it work?
 // if the preState is undefined or missed, the preState equals initStat
-export default function stats_reducer(preState = initState, action) {
+export default function stats_reducer(state = { value: 0, total: 0 }, action) {
 
-    console.log(preState, action);
+    console.log(state, action);
+
     const { type, data } = action
     switch (type) {
         case 'increment':
 
+            return { ...state, value: state.value + data, total: state.total + 1 }
 
-            return preState + data
 
         case 'decrement':
             // preState.count = preState.count - data
-            return preState - data
+            return { ...state, value: state.value - data, total: state.total + 1 }
         default:
-            return preState
+            return state
     }
+
 
 }

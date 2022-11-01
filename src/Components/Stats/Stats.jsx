@@ -22,7 +22,7 @@ export default class Stats extends Component {
     increment = () => {
         const { value } = this.myRef.current
         // console.log(this.myRef.current.value);
-        console.log(store.getState());
+        console.log(store.getState().value);
         // inform redux to add value
         store.dispatch({ type: 'increment', data: parseInt(value) })
 
@@ -40,7 +40,7 @@ export default class Stats extends Component {
         const { value } = this.myRef.current
         console.log(value);
         // console.log(this.myRef.current.value)
-        if (store.getState() % 2 == 1) {
+        if (store.getState().value % 2 == 1) {
             store.dispatch({ type: 'increment', data: parseInt(value) })
         }
     }
@@ -59,7 +59,7 @@ export default class Stats extends Component {
 
         return (
             <div>
-                <h1>current sum {store.getState()}</h1>
+                <h1>current sum {store.getState().value}</h1>
                 <select ref={this.myRef}>
                     <option value="1">1</option>
                     <option value="2">2</option>
