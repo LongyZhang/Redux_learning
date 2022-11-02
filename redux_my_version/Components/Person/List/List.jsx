@@ -7,9 +7,12 @@ export default class List extends Component {
         console.log(nameList, "ca");
         return (
             <ul>
-                {nameList.todos.map((todo) => {
-                    return <li key={todo.id}>{todo.name} {todo.age}</li>
-                })}
+                
+                {
+                    nameList.todos.map((todo) => {
+                        return <li key={todo.id}>{todo.name} {todo.age}</li>
+                    })
+                }
             </ul>
         )
     }

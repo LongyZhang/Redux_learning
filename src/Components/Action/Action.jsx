@@ -1,20 +1,14 @@
 import React, { Component } from 'react'
-import store from '../../Redux/store'
+import { useSelector } from 'react-redux'
 
-export default class Action extends Component {
 
-    componentDidMount() {
-        store.subscribe(() => {
-            this.setState({})
-        })
-    }
-
-    render() {
-
-        return (
-            <div>
-                <h4>Total Clicked times:{store.getState().total}</h4>
-            </div>
-        )
-    }
+function Action() {
+    const { total } = useSelector((state) => state.stats.todo)
+    return (
+        <div>
+            <h4>Total Clicked times:{total}</h4>
+        </div>
+    )
 }
+
+export default Action
