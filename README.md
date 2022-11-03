@@ -22,15 +22,23 @@
                 -store.js
                 -stats_reducer.js
 5   .store.js
-        1. import configStore from redux
-        2. configStore needs to improt a reducer as service
-        3. export the store object
+        1: import configStore from redux
+        2: configStore needs to improt a reducer as service
+        3: export the store object
 
 6   .stats_reduce
-        1. use spread operator to update object
-        2. reducer is core of redux,it process data basing on the type
+        1: use spread operator to update object
+        2: reducer is core of redux,it process data basing on the type
 
 7   .Action
-        1. Action can be object and function
-        2. Object action is sync Action, function action is async Action
+        1: Action can be object and function
+        2: Object action is sync Action, function action is async Action
 
+9   Redux toolkit
+        1: how to use slice in store
+        2: minimized useless code
+        3: learning of useSelector, useDispatch
+
+10  Redux DevTool
+        1: visualize the state
+        2: testing 
