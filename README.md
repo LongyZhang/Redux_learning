@@ -34,5 +34,3 @@
         1. Action can be object and function
         2. Object action is sync Action, function action is async Action
 
-8   .List
-        1. I need to learn redux toolkit lib

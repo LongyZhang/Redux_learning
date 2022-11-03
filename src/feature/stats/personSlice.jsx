@@ -11,7 +11,10 @@ export const personSlice = createSlice({
     initialState,
     reducers: {
         addPerson: (state, action) => {
-            state.push(action.payload)
+            // this way is better than push, it is better to use spread operator
+            return { person: [action.payload, ...state.person] }
+            // state.person.push(action.payload)
+            // return state
         },
     }
 

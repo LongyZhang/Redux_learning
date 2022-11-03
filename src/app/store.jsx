@@ -3,6 +3,7 @@ import { configureStore } from '@reduxjs/toolkit'
 
 import statsReducer from '../feature/stats/statsSlice'
 import personReducer from '../feature/stats/personSlice';
+
 // import count component reducer service
 
 
@@ -11,6 +12,7 @@ const store = configureStore({
         stats: statsReducer,
         person: personReducer,
     },
+
 });
 export default store
 // export store
